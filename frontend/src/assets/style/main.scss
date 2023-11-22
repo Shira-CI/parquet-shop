@@ -1,3 +1,14 @@
 /* Setup */
+@import './setup/mixins';
+@import './setup/vars';
+
+
 /* Base */
+@import './base/layout';
+@import './base/base';
+
+
+
 /* Components */
+@import './cmps/app.header';
+@import './cmps/hero';

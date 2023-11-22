@@ -1,0 +1,39 @@
+.header-container {
+    background-color: aqua;
+    min-height: 100px;
+    padding: 17px 0;
+    display: grid;
+    grid-template-columns: $layoutPadding 1fr $layoutPadding;
+
+    >* {
+        grid-column: 2;
+    }
+
+    .header-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .logo {
+            background-color: aliceblue
+        }
+
+        .navigation {
+            background-color: blanchedalmond
+        }
+    }
+
+    @include for-narrow-layout {
+        @include layoutGTC($break-narrow);
+    }
+
+    @include for-normal-layout {
+        @include layoutGTC($break-normal);
+    }
+
+    @include for-wide-layout {
+        @include layoutGTC($break-wide);
+    }
+
+
+
+}

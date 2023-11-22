@@ -3,7 +3,7 @@
 const Hero = () => {
 
     return (
-        <div>
+        <div className="hero full">
             Hero
         </div>
     )

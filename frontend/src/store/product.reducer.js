@@ -11,7 +11,7 @@ const initialState = {
     isLoading: false,
 }
 
-export function toyReducer(state = initialState, action) {
+export function productReducer(state = initialState, action) {
     // console.log('action', action)
     let toys
 

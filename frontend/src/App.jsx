@@ -1,14 +1,32 @@
-import {Route, HashRouter as Router, Routes} from 'react-router-dom'
-import {Provider} from 'react-redux'
+import { Route, HashRouter as Router, Routes } from 'react-router-dom'
+import { Provider } from 'react-redux'
 import './assets/style/main.scss'
+
+// import { store } from './store/store.js'
+import AppHeader from './cmps/AppHeader.jsx'
+import Hero from './cmps/Hero.jsx'
 
 function App() {
 
   return (
-    <div>
-      hi
+    // <Provider store={store}>
+    <Router>
+      <div className='main-layout'>
+        <AppHeader />
+        <Hero/>
+        <main className='main-app'>
+          <Routes>
+            {/* <Route element={<Hero />} path='/' /> */}
+          </Routes>
+        </main>
 
-    </div>
+
+      </div>
+
+
+    </Router>
+
+    // </Provider>
   )
 }
 

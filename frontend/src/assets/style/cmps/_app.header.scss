@@ -1,7 +1,5 @@
 .header-container {
-    background-color: aqua;
-    min-height: 100px;
-    padding: 17px 0;
+    padding: 5px 0;
     display: grid;
     grid-template-columns: $layoutPadding 1fr $layoutPadding;
 
@@ -13,8 +11,14 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+
         .logo {
-            background-color: aliceblue
+            height: 120px;
+        }
+
+        .logo-img {
+            object-fit: cover;
+            height: 100%;
         }
 
         .navigation {

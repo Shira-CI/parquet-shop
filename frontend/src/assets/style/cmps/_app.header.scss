@@ -1,5 +1,6 @@
 .header-container {
-    padding: 20px 0;
+    // padding: 20px 0;
+    padding-top: 10px;
     display: grid;
     grid-template-columns: $layoutPadding 1fr $layoutPadding;
 
@@ -29,20 +30,16 @@
                 list-style: none;
                 display: flex;
                 gap: 20px;
-                justify-content: center;
                 align-items: center;
                 height: 100%;
             }
             .nav-link {
                 cursor: pointer;
-
+                font-size: 1.125em;
                 &.active {
                     color: rgb(128, 73, 0);
                 }
-
             }
-
-
         }
     }
 

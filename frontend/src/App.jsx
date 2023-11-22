@@ -12,8 +12,10 @@ function App() {
     // <Provider store={store}>
     <Router>
       <div className='main-layout'>
+        <div className='hero-container full'>
         <AppHeader />
-        <Hero/>
+        {/* <Hero/> */}
+        </div>
         <main className='main-app'>
           <Routes>
             {/* <Route element={<Hero />} path='/' /> */}

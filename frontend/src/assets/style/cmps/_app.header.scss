@@ -1,5 +1,5 @@
 .header-container {
-    padding: 5px 0;
+    padding: 20px 0;
     display: grid;
     grid-template-columns: $layoutPadding 1fr $layoutPadding;
 
@@ -14,6 +14,7 @@
 
         .logo {
             height: 120px;
+            cursor: pointer;
         }
 
         .logo-img {
@@ -22,12 +23,40 @@
         }
 
         .navigation {
-            background-color: blanchedalmond
+            visibility: hidden;
+
+            .nav-links-container{
+                list-style: none;
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+            .nav-link {
+                cursor: pointer;
+
+                &.active {
+                    color: rgb(128, 73, 0);
+                }
+
+            }
+
+
         }
     }
 
     @include for-narrow-layout {
         @include layoutGTC($break-narrow);
+        .header-content{
+
+        
+        .navigation{
+            visibility: visible;
+            // display: flex
+        }
+    }
+
     }
 
     @include for-normal-layout {

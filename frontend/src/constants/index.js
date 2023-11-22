@@ -4,7 +4,7 @@
 
 export const navLinks = [
 {
-    id:'homePage',
+    id:'',
     title:'דף הבית'
 },
 {

@@ -4,9 +4,10 @@ import './assets/style/main.scss'
 
 // import { store } from './store/store.js'
 import AppHeader from './cmps/AppHeader.jsx'
-import Hero from './cmps/Hero.jsx'
+import Footer from './cmps/Footer.jsx'
 import About from './pages/About.jsx'
 import ProductIndex from './pages/ProductIndex.jsx'
+import HomePage from './pages/Home.jsx'
 
 import Projects from './pages/Projects.jsx'
 import Contact from './pages/Contact.jsx'
@@ -16,12 +17,10 @@ function App() {
     // <Provider store={store}>
     <Router>
       <div className='main-layout'>
-        {/* <div className='hero-container full'> */}
         <AppHeader />
-        {/* </div> */}
         <main className='main-app'>
           <Routes>
-            <Route element={<Hero />} path='/' />
+            <Route element={<HomePage />} path='/' />
             <Route element={<About />} path='/about' />
             <Route element={<ProductIndex />} path='/products' />
             <Route element={<Projects />} path='/projects' />
@@ -29,7 +28,7 @@ function App() {
           </Routes>
         </main>
 
-
+        <Footer />
       </div>
 
 

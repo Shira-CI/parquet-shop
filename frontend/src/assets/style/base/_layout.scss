@@ -1,6 +1,8 @@
 .main-layout {
     display: grid;
     grid-template-columns: $layoutPadding 1fr $layoutPadding;
+    grid-template-rows: min-content 1fr;
+    height: 100%;
 
     > * {
         grid-column: 2;
@@ -10,15 +12,21 @@
         grid-column: 1 / -1;
     }
 
+    .main-app{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto
+        // justify-content: center;
 
-    // > *:not(.full) {
-    //     display: grid;
-    //     grid-auto-flow: dense;
-    //     grid-template-columns: repeat( 6, 1fr );
-    // }
+    }
 
     @include for-narrow-layout {
         @include layoutGTC($break-narrow);
+        .main-app{
+            display: inline-block;
+    
+        }
+        // height: auto;
     }
     
     @include for-normal-layout {

@@ -1,18 +1,19 @@
 .hero-container {
+
     .hero-bcg {
-        background-color: rgb(255, 255, 211);
         position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
-        width: 100vw;
-        height: 100vh;
         overflow: hidden;
-
+        width: 100%;
+        height: 100%;
+        
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: right;
         }
     }
 
@@ -20,22 +21,50 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         color: $clr-2;
-        margin-top: 15%;
-        background-color: rgba(245, 245, 220, 0.232);
+        margin-top: 25%;
+        background-color: rgba(245, 245, 220, 0.415);
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         border-radius: 5px;
         padding-bottom: 10px;
 
+        &>:first-child {
+            font-size: 4em;
+        }
+
+        &>:last-child {
+            font-size: 2.5em;
+            font-family: Assistant-SemiBold, Arial, Helvetica, sans-serif;
+        }
+    }
+
+
+@include for-narrow-layout {
+    .hero-bcg {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .hero-txt {
+        background-color: rgba(245, 245, 220, 0.232);
+
+        margin-top: 15%;
         &>:first-child {
             font-size: 8.125em;
         }
 
         &>:last-child {
             font-size: 3.625em;
-            font-family: Assistant-SemiBold, Arial, Helvetica, sans-serif;
         }
     }
 }
 
-.hero {}
+@include for-normal-layout {
+    @include layoutGTC($break-normal);
+}
+
+@include for-wide-layout {
+    @include layoutGTC($break-wide);
+}
+}

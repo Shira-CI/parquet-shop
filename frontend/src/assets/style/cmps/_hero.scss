@@ -17,13 +17,15 @@
     }
 
     .hero-txt {
-        // font-family: 'Cinzel-Medium', Arial, Helvetica, sans-serif;
-
         display: flex;
         flex-direction: column;
         align-items: center;
         color: $clr-2;
-        margin-top: 20%;
+        margin-top: 15%;
+        background-color: rgba(245, 245, 220, 0.232);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 5px;
+        padding-bottom: 10px;
 
         &>:first-child {
             font-size: 8.125em;
@@ -31,6 +33,7 @@
 
         &>:last-child {
             font-size: 3.625em;
+            font-family: Assistant-SemiBold, Arial, Helvetica, sans-serif;
         }
     }
 }

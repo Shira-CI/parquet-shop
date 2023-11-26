@@ -1,5 +1,5 @@
 .header-container {
-    // padding: 20px 0;
+    padding: 20px 0;
     padding-top: 10px;
     display: grid;
     grid-template-columns: $layoutPadding 1fr $layoutPadding;
@@ -14,7 +14,7 @@
         justify-content: space-between;
 
         .logo {
-            height: 120px;
+            height: 70px;
             cursor: pointer;
         }
 
@@ -32,16 +32,54 @@
                 gap: 20px;
                 align-items: center;
                 height: 100%;
-                font-family: Assistant-SemiBold;
+                font-family: Assistant-SemiBold, Arial, Helvetica, sans-serif;
                 font-size: 1.25em;
             }
 
             .nav-link {
                 cursor: pointer;
-                font-size: 1.125em;
+                font-size: 1em;
+                position: relative;
+                padding: 5px 3px;
+                transition: opacity 0.3s ease;
+
+                &::before {
+                    content: '';
+                    width: 100%;
+                    height: 2px;
+                    background-color: rgba(0, 0, 0, 0.641);
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                    opacity: 0;
+                    transition: opacity 0.2s ;
+                }
+
+                &:hover::before {
+                    content: '';
+                    width: 100%;
+                    height: 2px;
+                    background-color: rgba(0, 0, 0, 0.641);
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                    opacity: 1;
+                    transition: opacity 0.4s ;
+                }
 
                 &.active {
-                    color: rgb(128, 73, 0);
+                    font-family: Assistant-Bold, Arial, Helvetica, sans-serif;
+                    &::before {
+                        content: '';
+                        width: 100%;
+                        height: 2px;
+                        background-color: rgba(0, 0, 0, 0.641);
+                        position: absolute;
+                        bottom: -1px;
+                        left: 0;
+                        opacity: 1;
+                        transition: opacity 0.4s ;
+                    }
                 }
             }
         }
@@ -55,7 +93,6 @@
 
             .navigation {
                 visibility: visible;
-                // display: flex
             }
         }
 
@@ -68,7 +105,5 @@
     @include for-wide-layout {
         @include layoutGTC($break-wide);
     }
-
-
 
 }

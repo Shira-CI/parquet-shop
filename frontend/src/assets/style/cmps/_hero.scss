@@ -1,6 +1,5 @@
-.hero-container{
-    height: calc(100vh - 130px);
-    .hero-bcg{
+.hero-container {
+    .hero-bcg {
         background-color: rgb(255, 255, 211);
         position: absolute;
         top: 0;
@@ -8,13 +7,32 @@
         z-index: -1;
         width: 100vw;
         height: 100vh;
-        overflow-x: hidden;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
-    .hero-txt{
-        background-color: aqua;
+    .hero-txt {
+        // font-family: 'Cinzel-Medium', Arial, Helvetica, sans-serif;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $clr-2;
+        margin-top: 20%;
+
+        &>:first-child {
+            font-size: 8.125em;
+        }
+
+        &>:last-child {
+            font-size: 3.625em;
+        }
     }
 }
 
-.hero{
-}
+.hero {}

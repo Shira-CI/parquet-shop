@@ -87,8 +87,8 @@ const ProductIndex = () => {
                 {/* {isLoading && <div className="loader"></div>} */}
 
                 <ProductList
-                    // products={products}
                     // user={loggedInUser}
+                    products={products}
                     onRemoveProduct={onRemoveProduct}
                     onAddToCart={onAddToCart}
                 />

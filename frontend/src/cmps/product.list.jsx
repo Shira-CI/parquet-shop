@@ -1,4 +1,4 @@
-// import { ProductPreview } from "./product.preview";
+import { ProductPreview } from "./product.preview";
 
 
 const ProductList = ({ products, onRemoveProduct, user, onAddToCart }) => {
@@ -6,11 +6,12 @@ const ProductList = ({ products, onRemoveProduct, user, onAddToCart }) => {
 
 // export function ProductList({ products, onRemoveProduct, user, onAddToCart }) {
     return <ul className="product-list">
-        {/* {products.map(product => */}
+        {products.map(product =>
 
-            {/* <li className="product-preview-container" key={product._id}> */}
-                {/* <ProductPreview product={product} onRemoveProduct={onRemoveProduct} user={user} onAddToCart={onAddToCart} /> */}
-            {/* </li>)} */}
+            <li className="product-preview-container" key={product._id}>
+                {product._id}
+               <ProductPreview product={product} onRemoveProduct={onRemoveProduct} user={user} onAddToCart={onAddToCart} /> 
+             </li>)} 
     </ul>
 }
 

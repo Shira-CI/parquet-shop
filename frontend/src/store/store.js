@@ -7,8 +7,8 @@ import { cartReducer } from './cart.reducer'
 
 const rootReducer = combineReducers({
     productModule: productReducer,
-    userModule: userReducer,
-    cartModule: cartReducer
+    // userModule: userReducer,
+    // cartModule: cartReducer
 })
 
 export const store = createStore(rootReducer)
@@ -17,5 +17,5 @@ export const store = createStore(rootReducer)
 
 // For debug
 store.subscribe(() => {
-    // console.log('Current state is:', store.getState())
+    console.log('Current state is:', store.getState())
 })

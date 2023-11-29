@@ -7,28 +7,28 @@ export const SET_IS_LOADING = 'SET_IS_LOADING'
 
 
 const initialState = {
-    toys: [],
+    products: [],
     isLoading: false,
 }
 
 export function productReducer(state = initialState, action) {
     // console.log('action', action)
-    let toys
+    let products
 
     switch (action.type) {
         case SET_IS_LOADING:
             return { ...state, isLoading: action.isLoading }        
         case SET_PRODUCTS:
-            return { ...state, toys: action.toys }
+            return { ...state, products: action.products }
         case REMOVE_PRODUCT:
-            toys = state.toys.filter(product => product._id !== action.toyId)
-            return { ...state, toys }
+            products = state.products.filter(product => product._id !== action.productId)
+            return { ...state, products }
         case ADD_PRODUCT:
-            toys = [...state.toys, action.product]
-            return { ...state, toys }
+            products = [...state.products, action.product]
+            return { ...state, products }
         case UPDATE_PRODUCT:
-            toys = state.toys.map(product => product._id === action.product._id ? action.product : product)
-            return { ...state, toys }
+            products = state.products.map(product => product._id === action.product._id ? action.product : product)
+            return { ...state, products }
             
         default:
             return state

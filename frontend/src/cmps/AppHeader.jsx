@@ -18,8 +18,13 @@ const AppHeader = () => {
     return (
 
         <div className="header-container full">
+            {toggleMobileMenu &&
+
+                <div className='hide-bcg' onClick={()=> setToggleMobileMenu(false)}></div>
+            }
+
             <div className="header-content">
-            <section className="logo" onClick={() => { navigate('/') }}>
+                <section className="logo" onClick={() => { navigate('/') }}>
                     <img className='logo-img' src={logo} alt="logo" />
 
                 </section>
@@ -36,23 +41,28 @@ const AppHeader = () => {
                 </section>
 
                 <section className="mobile-navigation">
-                    <img src={toggleMobileMenu ? close : menu } alt="menu" onClick={() => setToggleMobileMenu(!toggleMobileMenu)} />
+                    <img className='menu-icon' src={toggleMobileMenu ? close : menu} alt="menu" onClick={() => setToggleMobileMenu(!toggleMobileMenu)} />
 
-                    <ul className= {`${toggleMobileMenu ? 'mobile-nav-links-container' : 'hide'}`}>
+
+
+
+                    <ul className={`${toggleMobileMenu ? 'mobile-nav-links-container' : 'hide'}`}>
                         {navLinks.map((link) => (
                             <li key={link.id}
-                                onClick={() =>{
+                                onClick={() => {
                                     setToggleMobileMenu(false)
-                                    onNavLink(link.id)}}
+                                    onNavLink(link.id)
+                                }}
                                 className={`${active === link.id ? 'nav-link active' : 'nav-link'}`}>
                                 {link.title}
                             </li>
                         ))}
                     </ul>
+
                 </section>
 
 
-               
+
             </div>
         </div>
     )

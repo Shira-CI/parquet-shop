@@ -1,0 +1,46 @@
+.products-index {
+    width: 100%;
+    height: 100%;
+
+    .products-hero {
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            font-size: 3em;
+            color: $clr2;
+            font-family: Assistant-SemiBold, Arial, Helvetica, sans-serif;
+        }
+
+        .products-hero-img {
+            width: 100%;
+            height: inherit;
+            left: 0;
+            z-index: -1;
+            position: absolute;
+
+            img {
+                object-fit: cover;
+                object-position: bottom;
+                width: 100%;
+                height: 100%;
+                filter: brightness(0.6);
+            }
+        }
+    }
+
+    @include for-narrow-layout {
+        .products-hero {
+            height: 280px;
+        }
+    }
+
+    @include for-normal-layout {}
+
+    @include for-wide-layout {}
+
+    @include for-extra-wide-layout {}
+
+}

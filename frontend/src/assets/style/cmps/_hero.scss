@@ -30,6 +30,9 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         border-radius: 5px;
         padding-bottom: 10px;
+        position: absolute;
+        left: 0;
+        width: 100%;
 
         &>:first-child {
             font-size: 4em;
@@ -51,6 +54,8 @@
         .hero-txt {
             background-color: rgba(245, 245, 220, 0.232);
             margin-top: 25%;
+            position: static;
+            // left: auto;
 
             &>:first-child {
                 font-size: 6.125em;

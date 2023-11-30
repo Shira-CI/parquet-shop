@@ -4,7 +4,6 @@
     grid-template-columns: $layoutPadding 1fr $layoutPadding;
     position:sticky;
     top: 0;
-    // background-color: rgba(255, 255, 255, 0.557);
 
     >* {
         grid-column: 2;
@@ -12,17 +11,17 @@
 
     .hide-bcg {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100%;
+        left: -20px;
+        width: 100%;
+        height: 100vh;
         background-color: rgba(19, 30, 30, 0.615);
-        z-index: 2;
+        z-index: 3;
     }
 
     .menu-icon {
         position: relative;
-        z-index: 4;
+        // z-index: 4;
+
     }
 
  
@@ -48,6 +47,7 @@
         }
 
         .mobile-navigation {
+
             .hide {
                 display: none;
             }
@@ -56,19 +56,20 @@
                 display: flex;
                 flex-direction: column;
                 align-items: end;
-                width: 50%;
-                height: calc(100% - 10px);
+                width: 70%;
                 gap: 10px;
-                z-index: 5;
                 list-style: none;
                 border-radius: 5px;
                 background-color: rgba(245, 245, 220, 0.942);
-                margin-top: 10px;
                 padding: 15px 20px;
                 position: absolute;
+                top: 0;
+                z-index: 3;
                 right: 2px;
                 font-family: Assistant-SemiBold, Arial, Helvetica, sans-serif;
                 font-size: 1.25em;
+                height: 100vh;
+         
             }
         }
     }
@@ -160,4 +161,5 @@
 
 .header-bcg{
     background-color: rgba(255, 255, 255, 0.487);
+    border-bottom: 1px solid $clr3;
 }

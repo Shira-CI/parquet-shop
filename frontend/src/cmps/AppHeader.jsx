@@ -14,7 +14,6 @@ const AppHeader = () => {
 
     let dynBorderClass = (currentPath === '/') ? '' : 'header-bcg'
 
- 
     
     
     function onNavLink(linkId) {
@@ -24,11 +23,12 @@ const AppHeader = () => {
     
     
     return (
+        <>
+       
 
-        // <div className="header-container full">
+    
         <div className={`header-container full ${dynBorderClass}`}>
             {toggleMobileMenu &&
-
                 <div className='hide-bcg' onClick={()=> setToggleMobileMenu(false)}></div>
             }
 
@@ -50,11 +50,9 @@ const AppHeader = () => {
                 </section>
 
                 <section className="mobile-navigation">
-                    <img className='menu-icon' src={toggleMobileMenu ? close : menu} alt="menu" onClick={() => setToggleMobileMenu(!toggleMobileMenu)} />
-
-
-
-
+                    <img className='menu-icon' src={toggleMobileMenu ? close : menu}
+                     alt="menu" onClick={() => setToggleMobileMenu(!toggleMobileMenu)} />
+                  
                     <ul className={`${toggleMobileMenu ? 'mobile-nav-links-container' : 'hide'}`}>
                         {navLinks.map((link) => (
                             <li key={link.id}
@@ -74,6 +72,7 @@ const AppHeader = () => {
 
             </div>
         </div>
+        </>
     )
 }
 

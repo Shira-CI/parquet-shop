@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Link, useNavigate, useParams, useLocation } from 'react-router-dom'
 import { navLinks } from '../constants/index.js'
 import { logo, menu, close } from '../assets'
 
@@ -8,16 +8,25 @@ const AppHeader = () => {
     const [toggleMobileMenu, setToggleMobileMenu] = useState(false)
 
     const navigate = useNavigate()
-
+    const location = useLocation()
+    const currentPath = location.pathname
     const reversedNavLinks = [...navLinks].reverse()
 
+    let dynBorderClass = (currentPath === '/') ? '' : 'header-bcg'
+
+ 
+    
+    
     function onNavLink(linkId) {
         setActive(linkId)
         navigate(`/${linkId}`)
     }
+    
+    
     return (
 
-        <div className="header-container full">
+        // <div className="header-container full">
+        <div className={`header-container full ${dynBorderClass}`}>
             {toggleMobileMenu &&
 
                 <div className='hide-bcg' onClick={()=> setToggleMobileMenu(false)}></div>

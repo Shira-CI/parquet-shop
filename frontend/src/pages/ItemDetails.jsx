@@ -5,9 +5,6 @@ import { itemService } from '../services/item.service'
 
 import { parquetImg } from "../assets"
 
-
-
-
 const ItemDetails = () => {
     const [item, setItem] = useState('')
 

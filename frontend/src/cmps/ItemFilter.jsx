@@ -1,13 +1,13 @@
 
 import { useEffect, useRef, useState } from "react"
-import { productService } from "../services/product.service.js"
+import { itemService } from "../services/item.service.js"
 
 
-const ProductFilter = ({ onSetFilter }) => {
+const ItemFilter = ({ onSetFilter }) => {
 
 
-// export function ProductFilter({ onSetFilter }) {
-    const [filterByToEdit, setFilterByToEdit] = useState(productService.getDefaultFilter())
+// export function ItemFilter({ onSetFilter }) {
+    const [filterByToEdit, setFilterByToEdit] = useState(itemService.getDefaultFilter())
     // onSetFilter = useRef(utilService.debounce(onSetFilter))
     // console.log(filterByToEdit)
 
@@ -35,7 +35,7 @@ const ProductFilter = ({ onSetFilter }) => {
         onSetFilter(filterByToEdit)
     }
 
-    return <section className="product-filter">
+    return <section className="item-filter">
         <form onSubmit={onSubmitFilter}>
 
             <label htmlFor="title">Search by name:</label>
@@ -85,4 +85,4 @@ const ProductFilter = ({ onSetFilter }) => {
     </section>
 }
 
-export default ProductFilter
+export default ItemFilter

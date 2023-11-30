@@ -6,7 +6,8 @@ import { store } from './store/store.js'
 import AppHeader from './cmps/AppHeader.jsx'
 import Footer from './cmps/Footer.jsx'
 import About from './pages/About.jsx'
-import ProductIndex from './pages/ProductIndex.jsx'
+import ItemIndex from './pages/ItemIndex.jsx'
+import ItemDetails from './pages/ItemDetails.jsx'
 import HomePage from './pages/Home.jsx'
 
 import Projects from './pages/Projects.jsx'
@@ -22,8 +23,9 @@ function App() {
           <Routes>
             <Route element={<HomePage />} path='/' />
             <Route element={<About />} path='/about' />
-            <Route element={<ProductIndex />} path='/products' />
-            <Route element={<Projects />} path='/projects' />
+            <Route element={<ItemIndex />} path='/item' />
+            <Route element={<ItemDetails />} path='/item/:itemId'/>
+            <Route element={<Projects />} path='/project' />
             <Route element={<Contact />} path='/contact' />
           </Routes>
         </main>

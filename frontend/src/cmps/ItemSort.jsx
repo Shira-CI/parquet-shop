@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 
-const ProductSort = ({ sortBy, setSortBy }) => {
+const ItemSort = ({ sortBy, setSortBy }) => {
 
 
 
-// export function ProductSort({ sortBy, setSortBy }) {
+// export function ItemSort({ sortBy, setSortBy }) {
 
     const [sortByToEdit, setSortByToEdit] = useState({ ...sortBy })
 
@@ -27,7 +27,7 @@ const ProductSort = ({ sortBy, setSortBy }) => {
     
 
     return (
-        <form className="product-sort">
+        <form className="item-sort">
             <select className="sort-type" name="type" value={sortByToEdit.type} onChange={handleChange}>
                 <option value="headline" disabled >Select sorting option</option>
                 <option value="title">Name</option>
@@ -42,4 +42,4 @@ const ProductSort = ({ sortBy, setSortBy }) => {
     )
 }
 
-export default ProductSort
+export default ItemSort

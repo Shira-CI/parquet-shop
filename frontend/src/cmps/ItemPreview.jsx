@@ -3,23 +3,23 @@ import { useState } from 'react'
 import { parquetImg } from "../assets"
 
 
-export function ProductPreview({ product, onRemoveProduct, user, onAddToCart }) {
+export function ItemPreview({ item, onRemoveItem, user, onAddToCart }) {
 
     return (
         <>
-            <Link className="details-link" to={`/product/${product._id}`}>
+            <Link className="details-link" to={`/item/${item._id}`}>
 
                 <div className="preview-img-container">
-                    {/* <img src={product.image} alt="" /> */}
+                    {/* <img src={item.image} alt="" /> */}
                     <img src={parquetImg} alt="" />
 
                 </div>
 
-                <h2 className="product-preview-title">{product.title}</h2>
+                <h2 className="item-preview-title">{item.title}</h2>
             </Link>
 
-            <div className="product-price-container">
-                <p className="product-preview-price">  <span> ₪{product.price} </span>
+            <div className="item-price-container">
+                <p className="item-preview-price">  <span> ₪{item.price} </span>
                 </p>
                 <div>
                 למ"ר
@@ -27,7 +27,7 @@ export function ProductPreview({ product, onRemoveProduct, user, onAddToCart }) 
             </div>
            
 
-            {/* {!product.inStock && <div className="product-unavailable">
+            {/* {!item.inStock && <div className="item-unavailable">
                     <span >Out of stock</span>
                 </div>
                 } */}

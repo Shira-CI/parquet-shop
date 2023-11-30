@@ -1,25 +1,26 @@
 .products-list {
     list-style: none;
     display: grid;
+ 
     padding: 20px 0;
-    justify-content: space-between;
-    grid-template-columns: repeat(2, auto);
+    // justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 
 
     @include for-narrow-layout {
         // @include layoutGTC($break-narrow);
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     @include for-normal-layout {
         // @include layoutGTC($break-normal);
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     @include for-wide-layout {
         // @include layoutGTC($break-wide);
-        grid-template-columns: repeat(4, auto);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     @include for-extra-wide-layout {}

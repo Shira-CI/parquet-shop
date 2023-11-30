@@ -2,12 +2,13 @@
     margin: 10px;
     padding: 10px 5px;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-    height: 100%;
+    // height: 100%;
     font-family: Assistant-SemiBold, Arial, Helvetica, sans-serif;
     color: $clr-1;
     text-decoration: none;
 
     .preview-img-container {
+        margin-bottom: 7px;
         img {
             aspect-ratio: 1 / 1;
             width: 100%;

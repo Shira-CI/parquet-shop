@@ -1,7 +1,10 @@
 .header-container {
-    padding: 20px 0;
+    padding: 5px 0;
     display: grid;
     grid-template-columns: $layoutPadding 1fr $layoutPadding;
+    position:sticky;
+    top: 0;
+    // background-color: rgba(255, 255, 255, 0.557);
 
     >* {
         grid-column: 2;

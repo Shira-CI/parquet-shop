@@ -1,13 +1,13 @@
-import { parquetHero } from "../assets"
+import { parquetHero } from "../assets/index.js"
 
-import ProductFilter from '../cmps/product.filter.jsx'
-import ProductSort from '../cmps/product.sort.jsx'
-import ProductList from '../cmps/product.list.jsx'
+// import ProductFilter from '../cmps/ProductFilter.jsx'
+// import ProductSort from '../cmps/ProductSort.jsx'
+import ProductList from '../cmps/ProductList.jsx'
 
 import { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from "react-redux"
-import { productService } from "../services/product.service"
-import { loadProducts, removeProduct } from "../store/product.action"
+import { productService } from "../services/product.service.js"
+import { loadProducts, removeProduct } from "../store/product.action.js"
 
 // import { ADD_PRODUCT_TO_CART, SET_CART_IS_SHOWN } from '../store/cart.reducer'
 

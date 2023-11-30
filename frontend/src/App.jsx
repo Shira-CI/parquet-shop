@@ -6,7 +6,7 @@ import { store } from './store/store.js'
 import AppHeader from './cmps/AppHeader.jsx'
 import Footer from './cmps/Footer.jsx'
 import About from './pages/About.jsx'
-import ProductIndex from './pages/Product.index.jsx'
+import ProductIndex from './pages/ProductIndex.jsx'
 import HomePage from './pages/Home.jsx'
 
 import Projects from './pages/Projects.jsx'

@@ -1,4 +1,4 @@
-import { ProductPreview } from "./product.preview";
+import { ProductPreview } from "./ProductPreview";
 
 
 const ProductList = ({ products, onRemoveProduct, user, onAddToCart }) => {

@@ -4,7 +4,7 @@ import { storageService } from './async-storage.service.js'
 // import { userService } from '../services/user.service.js'
 
 const STORAGE_KEY = 'itemDB'
-const BASE_URL = 'item/'
+const BASE_URL = '/'
 
 const labels = ['On wheels', 'Box game', 'Art', 'Baby', 'Doll', 'Puzzle',
 'Outdoor', 'Battery Powered']

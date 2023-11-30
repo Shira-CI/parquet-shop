@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    text-align: center;
+
 }
 
 #root{
@@ -20,4 +20,9 @@ body{
 html{
     
     height: 100vh;
+}
+
+button{
+    font-family: Assistant-SemiBold, Arial, Helvetica, sans-serif;
+
 }

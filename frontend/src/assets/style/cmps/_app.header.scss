@@ -1,6 +1,6 @@
 .header-container {
-    padding: 5px 0;
-    display: grid;
+    padding: 15px 0;
+    // display: grid;
     grid-template-columns: $layoutPadding 1fr $layoutPadding;
     position:sticky;
     top: 0;
@@ -76,7 +76,8 @@
 
     @include for-narrow-layout {
         @include layoutGTC($break-narrow);
-
+        display: grid;
+        // padding: 5px 0;
         .header-content {
             .mobile-navigation {
                 display: none;

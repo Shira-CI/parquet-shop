@@ -10,68 +10,58 @@ const AppHeader = () => {
     const navigate = useNavigate()
     const location = useLocation()
     const currentPath = location.pathname
-    const reversedNavLinks = [...navLinks].reverse()
 
     let dynBorderClass = (currentPath === '/') ? '' : 'header-bcg'
 
-    
-    
     function onNavLink(linkId) {
         setActive(linkId)
         navigate(`/${linkId}`)
     }
-    
-    
+
+
     return (
         <>
-       
+            <div className={`header-container full ${dynBorderClass}`}>
+                {toggleMobileMenu &&
+                    <div className='hide-bcg' onClick={() => setToggleMobileMenu(false)}></div>
+                }
 
-    
-        <div className={`header-container full ${dynBorderClass}`}>
-            {toggleMobileMenu &&
-                <div className='hide-bcg' onClick={()=> setToggleMobileMenu(false)}></div>
-            }
+                <div className="header-content">
+                    <section className="logo" onClick={() => { navigate('/') }}>
+                        <img className='logo-img' src={logo} alt="logo" />
 
-            <div className="header-content">
-                <section className="logo" onClick={() => { navigate('/') }}>
-                    <img className='logo-img' src={logo} alt="logo" />
+                    </section>
+                    <section className="navigation">
+                        <ul className='nav-links-container'>
+                            {navLinks.map((link) => (
+                                <li key={link.id}
+                                    onClick={() => onNavLink(link.id)}
+                                    className={`${active === link.id ? 'nav-link active' : 'nav-link'}`}>
+                                    {link.title}
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
 
-                </section>
-                <section className="navigation">
-                    <ul className='nav-links-container'>
-                        {reversedNavLinks.map((link) => (
-                            <li key={link.id}
-                                onClick={() => onNavLink(link.id)}
-                                className={`${active === link.id ? 'nav-link active' : 'nav-link'}`}>
-                                {link.title}
-                            </li>
-                        ))}
-                    </ul>
-                </section>
+                    <section className="mobile-navigation">
+                        <img className='menu-icon' src={toggleMobileMenu ? close : menu}
+                            alt="menu" onClick={() => setToggleMobileMenu(!toggleMobileMenu)} />
 
-                <section className="mobile-navigation">
-                    <img className='menu-icon' src={toggleMobileMenu ? close : menu}
-                     alt="menu" onClick={() => setToggleMobileMenu(!toggleMobileMenu)} />
-                  
-                    <ul className={`${toggleMobileMenu ? 'mobile-nav-links-container' : 'hide'}`}>
-                        {navLinks.map((link) => (
-                            <li key={link.id}
-                                onClick={() => {
-                                    setToggleMobileMenu(false)
-                                    onNavLink(link.id)
-                                }}
-                                className={`${active === link.id ? 'nav-link active' : 'nav-link'}`}>
-                                {link.title}
-                            </li>
-                        ))}
-                    </ul>
-
-                </section>
-
-
-
+                        <ul className={`${toggleMobileMenu ? 'mobile-nav-links-container' : 'hide'}`}>
+                            {navLinks.map((link) => (
+                                <li key={link.id}
+                                    onClick={() => {
+                                        setToggleMobileMenu(false)
+                                        onNavLink(link.id)
+                                    }}
+                                    className={`${active === link.id ? 'nav-link active' : 'nav-link'}`}>
+                                    {link.title}
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
+                </div>
             </div>
-        </div>
         </>
     )
 }

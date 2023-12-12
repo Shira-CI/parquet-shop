@@ -12,6 +12,7 @@ import HomePage from './pages/Home.jsx'
 
 import Projects from './pages/Projects.jsx'
 import Contact from './pages/Contact.jsx'
+import MainCatalog from './pages/MainCatalog.jsx'
 function App() {
 
   return (
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route element={<HomePage />} path='/' />
             <Route element={<About />} path='/about' />
+            <Route element={<MainCatalog />} path='/catalog' />
             <Route element={<ItemIndex />} path='/item' />
             <Route element={<ItemDetails />} path='/item/:itemId'/>
             <Route element={<Projects />} path='/project' />

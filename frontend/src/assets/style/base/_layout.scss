@@ -9,9 +9,7 @@
         grid-column: 2;
     }
 
-    > *.full {
-        grid-column: 1 / -1;
-    }
+
 
     .main-app{
         display: flex;
@@ -24,6 +22,9 @@
 
     @include for-narrow-layout {
         @include layoutGTC($break-narrow);
+        > *.full {
+            grid-column: 1 / -1;
+        }
         .main-app{
             // display: inline-block;
     

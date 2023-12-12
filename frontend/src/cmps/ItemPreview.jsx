@@ -19,22 +19,15 @@ export function ItemPreview({ item, onRemoveItem, user, onAddToCart }) {
             </Link>
 
             <div className="item-price-container">
-                <p className="item-preview-price">  <span> ₪{item.price} </span>
+                <p className="item-preview-price">  <span>₪{item.price } למ"ר</span>
                 </p>
-                <div>
-                למ"ר
             </div>
-            </div>
-           
-
+        
             {/* {!item.inStock && <div className="item-unavailable">
                     <span >Out of stock</span>
                 </div>
                 } */}
-
-
         </>
-
     )
 }
 

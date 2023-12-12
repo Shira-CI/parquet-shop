@@ -1,5 +1,14 @@
 
-
+export const parquetTypes = [
+    {
+        id:'laminate',
+        title:'פרקט למינציה'
+    },
+    {
+        id:'spc',
+        title:'פרקט spc'
+    }
+]
 
 
 export const navLinks = [
@@ -12,7 +21,7 @@ export const navLinks = [
     title:'אודות'
 },
 {
-    id:'item',
+    id:'catalog',
     title:'פרקטים'
 },
 {

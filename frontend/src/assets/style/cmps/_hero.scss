@@ -1,6 +1,11 @@
-.hero-container {
+// <a href="https://www.freepik.com/free-ai-image/ai-generated-modern-styled-entryway_58598667.htm#page=7&query=parquet%20home%20design&position=42&from_view=search&track=ais&uuid=770b99ae-e2ca-4b39-8a74-f4eb063ad5b2">Image By freepik</a>
 
-    // height: 100%;
+.hero-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
 
     .hero-bcg {
         position: absolute;
@@ -11,61 +16,90 @@
         // width: 100%;
         height: 100%;
 
+        div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            background-color: rgba(29, 29, 29, 0.5);
+        }
+
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: right;
+            // object-position: right;
         }
     }
 
     .hero-txt {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        // justify-content: center;
+        font-family: Cormorant_Infant-Regular, Arial, Helvetica, sans-serif;
         text-align: center;
-        color: $clr-2;
-        margin-top: 30%;
-        background-color: rgba(245, 245, 220, 0.415);
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        color: $clr1;
         border-radius: 5px;
-        padding-bottom: 10px;
-        position: absolute;
-        z-index: -1;
-        left: 0;
-        width: 100%;
+        padding: 10px;
+        line-height: 3.95em;
+        position: relative;
+        top: 10%;
 
-        &>:first-child {
-            font-size: 4em;
+        &>:first-child,  &>:nth-child(2)  {
+            font-size: 6.5em;
         }
 
-        &>:last-child {
-            font-size: 2.5em;
-            font-family: Assistant-SemiBold, Arial, Helvetica, sans-serif;
+        &>:nth-child(3) {
+            font-size: 1.5em;
+            line-height: 3em;
+            font-family: Assistant-Regular, Arial, Helvetica, sans-serif;
         }
+    }
+
+    button {
+        width: fit-content;
+        padding: 7px 30px;
+        background-color: #342d26;
+        color: $clr1;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        font-size: 1em;
+        position: relative;
+        top: 15%;
+        transition: 0.2s;
+
+
+        &:hover {
+            background-color: rgba(238, 238, 238, 0.942);
+            color: black;
+            transition: 0.2s;
+        }
+
     }
 
 
     @include for-narrow-layout {
+
         .hero-bcg {
             width: 100vw;
-            height: 100vh;
+
         }
 
         .hero-txt {
-            background-color: rgba(245, 245, 220, 0.232);
-            margin-top: 25%;
-            position: static;
-            // left: auto;
+            position: absolute;
+            top: 20%;
+            line-height: 7.3rem;
 
-            &>:first-child {
-                font-size: 6.125em;
+            &>:first-child,  &>:nth-child(2)  {
+                font-size: 12em;
             }
+        }
 
-            &>:last-child {
-                font-size: 2.625em;
-            }
+        button {
+            font-size: 1.25em;
+            padding: 7px 30px;
+            position: relative;
+            top: 54%;
         }
     }
 
@@ -73,15 +107,15 @@
         @include layoutGTC($break-normal);
 
         .hero-txt {
-            margin-top: 15%;
+            // margin-top: 15%;
 
-            &>:first-child {
-                font-size: 8.125em;
-            }
+            // &>:first-child {
+            //     font-size: 10em;
+            // }
 
-            &>:last-child {
-                font-size: 3.625em;
-            }
+            // &>:last-child {
+            //     font-size: 2em;
+            // }
         }
     }
 

@@ -1,21 +1,28 @@
 import { hero } from "../assets" 
+import { hero2 } from "../assets" 
+import { hero3 } from "../assets" 
 
 const Hero = () => {
 
     return (
         <div className="hero-container">
             <div className="hero-bcg">
-                <img src={hero} alt="hero" />
+                <div></div>
+                <img src={hero3} alt="hero" />
             </div>
             <div className="hero-txt">
                 <div>
-                    MIA GROUP
+                    MIA 
+                </div>
+                <div>
+                   GROUP
                 </div>
                 <div>
                     יזמות ובנייה
                 </div>
 
             </div>
+            <button> לקטלוג פרקטים </button>
         </div>
 
     )

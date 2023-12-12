@@ -20,9 +20,9 @@ const Hero = () => {
                 <div>
                     יזמות ובנייה
                 </div>
+            <button> לקטלוג פרקטים </button>
 
             </div>
-            <button> לקטלוג פרקטים </button>
         </div>
 
     )

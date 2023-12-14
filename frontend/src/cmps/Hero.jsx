@@ -7,6 +7,7 @@ import { SectionWrapper } from '../hoc'
 import { forwardRef } from 'react'
 
 const Hero = forwardRef(({ isVisible }, ref) => {
+    // console.log(isVisible)
 
     return (
         // <AnimatePresence>
@@ -18,7 +19,7 @@ const Hero = forwardRef(({ isVisible }, ref) => {
             {isVisible &&
                 <motion.div
                     // key="hero-text"
-                    variants={fadeIn('up', '', 0.1, 1.2)}
+                    variants={fadeIn('up', '', 0.1, 1.2, 'hero')}
                     initial='hidden'
                     animate="show"
                     className="hero-txt">

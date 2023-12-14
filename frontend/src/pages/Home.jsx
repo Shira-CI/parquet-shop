@@ -1,4 +1,6 @@
 import Hero from '../cmps/Hero'
+import HomeParquets from '../cmps/HomeParquets'
+import HomeProjects from '../cmps/HomeProjects'
 import { useState, useEffect, useRef } from 'react'
 
 const HomePage = () => {
@@ -24,58 +26,9 @@ const HomePage = () => {
     return (
         <>
             <Hero ref={heroRef} isVisible={isHeroVisible} />
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
-            <div>scsas</div>
+            <HomeParquets />
+            <HomeProjects />
+
         </>
 
     )

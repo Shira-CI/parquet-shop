@@ -1,6 +1,7 @@
 import Hero from '../cmps/Hero'
 import HomeParquets from '../cmps/HomeParquets'
 import { useState, useEffect, useRef } from 'react'
+import HomeProjects from '../cmps/HomeProjects';
 
 const HomePage = () => {
 
@@ -37,6 +38,7 @@ const HomePage = () => {
   const handleScroll = () => {
     isElementInViewport(heroRef, 'hero')
     isElementInViewport(parquetsRef, 'parquets')
+    isElementInViewport(projectsRef, 'projects')
   }
 
 
@@ -57,146 +59,8 @@ const HomePage = () => {
     <>
       <Hero ref={heroRef} isVisible={componentVisibility.hero} />
       <HomeParquets ref={parquetsRef} isVisible={componentVisibility.parquets} />
-      {/* <HomeProjects ref={projectsRef} isVisible={componentVisibility.projects} /> */}
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-      <div>jkkkjjjjk</div>
-
-
+      <HomeProjects ref={projectsRef} isVisible={componentVisibility.projects} />
     </>
-
   )
 }
 

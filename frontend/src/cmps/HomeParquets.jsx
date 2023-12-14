@@ -1,9 +1,7 @@
 import { forwardRef } from 'react'
-
 import { parquetTypes } from '../constants'
 import { motion } from 'framer-motion'
 import { fadeIn, slideIn } from '../utils/motion'
-
 
 const HomeParquets = forwardRef(({ isVisible }, ref) => {
     return (

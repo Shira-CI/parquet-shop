@@ -89,11 +89,11 @@
         }
 
         .hero-txt {
-            line-height: 7.35rem;
+            line-height: 5em;
 
             &>:first-child,
             &>:nth-child(2) {
-                font-size: 12em;
+                font-size: 8.2em;
             }
         }
 
@@ -102,29 +102,33 @@
             padding: 7px 30px;
             position: relative;
             top: 0;
-            // bottom: 0
-            // bottom: 100%;
-
         }
     }
 
     @include for-normal-layout {
         @include layoutGTC($break-normal);
 
+   
         .hero-txt {
-            // margin-top: 15%;
+            line-height: 6.1em;
 
-            // &>:first-child {
-            //     font-size: 10em;
-            // }
-
-            // &>:last-child {
-            //     font-size: 2em;
-            // }
+            &>:first-child,
+            &>:nth-child(2) {
+                font-size: 10em;
+            }
         }
     }
 
     @include for-wide-layout {
         @include layoutGTC($break-wide);
+         
+        .hero-txt {
+            line-height: 7.35em;
+
+            &>:first-child,
+            &>:nth-child(2) {
+                font-size: 12em;
+            }
+        }  
     }
 }

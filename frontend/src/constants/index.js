@@ -2,6 +2,32 @@ import {hero, hero2, hero3} from '../assets'
 
 
 
+export const projects = [
+    {
+        id:'project1',
+        title:'פרוייקט 1',
+        img:hero,
+        products:[]
+    },
+    {
+        id:'project2',
+        title:'2',
+        img:hero2,
+        products:[]
+    },
+    {
+        id:'project3',
+        title:'פרוייקט 3',
+        img:hero3,
+        products:[]
+    },
+    {
+        id:'project4',
+        title:'פרוייקט 4',
+        img:hero3,
+        products:[]
+    }
+]
 export const parquetTypes = [
     {
         id:'laminate',

@@ -60,6 +60,19 @@ const HomePage = () => {
       <Hero ref={heroRef} isVisible={componentVisibility.hero} />
       <HomeParquets ref={parquetsRef} isVisible={componentVisibility.parquets} />
       <HomeProjects ref={projectsRef} isVisible={componentVisibility.projects} />
+   <div>dwdasasa</div>
+   <div>dwdasasa</div>
+   <div>dwdasasa</div>
+   <div>dwdasasa</div>
+   <div>dwdasasa</div>
+   <div>dwdasasa</div>
+   <div>dwdasasa</div>
+   <div>dwdasasa</div>
+   <div>dwdasasa</div>
+   <div>dwdasasa</div>
+   <div>dwdasasa</div>
+   <div>dwdasasa</div>
+   <div>dwdasasa</div>
     </>
   )
 }

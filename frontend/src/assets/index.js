@@ -8,6 +8,9 @@ import hero3 from './img/hero3.jpg'
 import parquetHero from './img/parquet-index.jpg'
 import parquetImg from './img/parquetsample.jpg'
 import shortAboutImg from './img/about-short.jpg'
+// import bcg from './img/bcg.png'
+// import bcg from './img/bcg2.png'
+import bcg from './img/bcg3.png'
 
 export {
     logo,
@@ -18,5 +21,6 @@ export {
     hero3,
     parquetHero,
     parquetImg,
-    shortAboutImg
+    shortAboutImg,
+    bcg
 }

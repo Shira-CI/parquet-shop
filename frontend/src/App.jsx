@@ -49,8 +49,7 @@ function App() {
 
           <Footer />
         </div>
-
-
+       
       </Router>
 
     </Provider>

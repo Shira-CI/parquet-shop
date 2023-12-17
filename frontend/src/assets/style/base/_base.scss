@@ -5,26 +5,26 @@
 
 }
 
-#root{
-    height: 100%;
+#root {
 
 }
 
-body{
+.body-bcg {
+    // background-image: url('src/assets/img/bcg2.png');
+    // background-size: cover;
+    // background-repeat: round;
+    
+}
+
+
+body {
     font-family: Assistant-Regular, Arial, Helvetica, sans-serif;
     color: $clr2;
-    height: 100%;
-    background-color: $clr1;
     direction: rtl;
-    background-color: wheat;
 }
 
-html{
-    
-    height: 100vh;
-}
+html {}
 
-button{
+button {
     font-family: Assistant-SemiBold, Arial, Helvetica, sans-serif;
-
 }

@@ -36,7 +36,6 @@ const HomeParquets = forwardRef(({ isVisible }, ref) => {
                                     key={type.id}
                                     initial='hidden'
                                     animate="show"
-                                    className="home-parquets-container"
                                 >
                                     <span>
                                         {type.title}

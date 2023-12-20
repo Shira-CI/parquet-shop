@@ -2,6 +2,7 @@ import { forwardRef } from 'react'
 import { projects } from '../constants'
 import { motion } from 'framer-motion'
 import { fadeIn, slideIn } from '../utils/motion'
+import { arrowRight } from '../assets'
 
 const HomeProjects = forwardRef(({ isVisible }, ref) => {
     return (
@@ -11,38 +12,37 @@ const HomeProjects = forwardRef(({ isVisible }, ref) => {
                     variants={fadeIn('down', '', 0, 1.5, '')}
                     initial='hidden'
                     animate="show"
+                    className='home-projects'
                 >
-                    <div className='home-projects'>
-                        <section className='home-projects-header'>
-                            <h2>פרוייקטים שלנו</h2>
-                        </section>
+                    <section className='home-projects-header'>
+                        <h2>פרוייקטים </h2>
+                    </section>
 
-                        <section className="projects">
-                            <ul className="">
-                                {projects.map((project, idx) =>
-                                    <li
-                                        variants={slideIn('up', '', idx + 0.1, 0.2)}
-                                        key={project.id}
-                                        initial='hidden'
-                                        animate="show"
-                                    >
-                                        <span>
+                    <section className="projects">
+                        <ul className="">
+                            {projects.map((project, idx) =>
+                                <li
+                                    variants={slideIn('up', '', idx + 0.1, 0.2)}
+                                    key={project.id}
+                                    initial='hidden'
+                                    animate="show"
+                                >
+                                    <span>
+                                        <section>
                                             {project.title}
-                                        </span>
-                                            <img src={project.img} alt="" />
-                                        {/* <div> */}
-                                        {/* </div> */}
-                                    </li>
-                                )}
+                                        </section>
 
-                            </ul>
-                        </section>
+                                        <section>
+                                            <img src={arrowRight} alt="" />
+                                         לפרוייקטים
+                                        </section>
+                                    </span>
+                                    <img src={project.img} alt="" />
 
-
-                    </div>
-
-
-
+                                </li>
+                            )}
+                        </ul>
+                    </section>
 
                 </motion.section>
             }

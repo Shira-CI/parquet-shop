@@ -1,0 +1,29 @@
+.type-container{
+    // background-color: green;
+    margin-top: 101px;
+    padding: 40px 20px;
+    color: black;
+
+
+
+    .type-gallery{
+        margin-top: 50px;
+
+        div{
+            margin-top: 20px;
+            display: flex;
+            gap: 40px;
+
+            section{
+                flex: 1;
+                border: 1px solid black;
+                width: 400px;
+                height: 400px;
+            }
+        }
+    }
+
+
+
+
+}

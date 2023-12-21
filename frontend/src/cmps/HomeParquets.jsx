@@ -1,4 +1,5 @@
 import { forwardRef } from 'react'
+import { Link } from 'react-router-dom'
 import { parquetTypes } from '../constants'
 import { motion } from 'framer-motion'
 import { fadeIn, slideIn } from '../utils/motion'
@@ -38,7 +39,9 @@ const HomeParquets = forwardRef(({ isVisible }, ref) => {
                                     animate="show"
                                 >
                                     <span>
-                                        {type.title}
+                                        <Link to={`/catalog/${type.id}`}>
+                                            {type.title}
+                                        </Link>
                                     </span>
                                     <div>
 

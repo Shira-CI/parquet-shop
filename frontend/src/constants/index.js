@@ -30,7 +30,7 @@ export const projects = [
 ]
 export const parquetTypes = [
     {
-        id:'laminate',
+        id:'lamination',
         title:'פרקט למינציה',
         img:hero,
         products:[]
@@ -42,7 +42,7 @@ export const parquetTypes = [
         products:[]
     },
     {
-        id:'tree',
+        id:'wood',
         title:'פרקט עץ',
         img:hero3,
         products:[]

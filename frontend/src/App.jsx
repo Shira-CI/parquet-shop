@@ -11,10 +11,12 @@ import About from './pages/About.jsx'
 import ItemIndex from './pages/ItemIndex.jsx'
 import ItemDetails from './pages/ItemDetails.jsx'
 import HomePage from './pages/Home.jsx'
+import ParquetSpc from './pages/ParquetSpc.jsx'
 
 import Projects from './pages/Projects.jsx'
 import Contact from './pages/Contact.jsx'
 import MainCatalog from './pages/MainCatalog.jsx'
+import ParquetLamination from './pages/ParquetLamination.jsx'
 function App() {
 
   useEffect(() => {
@@ -40,8 +42,10 @@ function App() {
               <Route element={<HomePage />} path='/' />
               <Route element={<About />} path='/about' />
               <Route element={<MainCatalog />} path='/catalog' />
-              <Route element={<ItemIndex />} path='/item' />
-              <Route element={<ItemDetails />} path='/item/:itemId' />
+              <Route element={<ParquetSpc />} path='/catalog/spc' />
+              <Route element={<ParquetLamination />} path='/catalog/lamination' />
+              {/* <Route element={<ItemIndex />} path='/item' /> */}
+              {/* <Route element={<ItemDetails />} path='/item/:itemId' /> */}
               <Route element={<Projects />} path='/project' />
               <Route element={<Contact />} path='/contact' />
             </Routes>

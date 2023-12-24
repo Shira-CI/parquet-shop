@@ -32,22 +32,21 @@ const HomeParquets = forwardRef(({ isVisible }, ref) => {
                     <section className="home-parquets">
                         <ul className="parquet-types">
                             {parquetTypes.map((type, idx) =>
-                                <li
-                                    variants={slideIn('up', '', idx + 0.1, 0.2)}
-                                    key={type.id}
-                                    initial='hidden'
-                                    animate="show"
-                                >
-                                    <span>
-                                        <Link to={`/catalog/${type.id}`}>
+                                <Link to={`/catalog/${type.id}`} key={type.id}>
+                                    <li
+                                        variants={slideIn('up', '', idx + 0.1, 0.2)}
+                                        initial='hidden'
+                                        animate="show"
+                                    >
+                                        <span>
                                             {type.title}
-                                        </Link>
-                                    </span>
-                                    <div>
 
-                                        <img src={type.img} alt="" />
-                                    </div>
-                                </li>
+                                        </span>
+                                        <div>
+                                             <img className='img2' src={type.img} alt="" />
+                                        </div>
+                                    </li>
+                                </Link>
                             )}
 
                         </ul>

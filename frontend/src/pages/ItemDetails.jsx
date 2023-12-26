@@ -58,7 +58,7 @@ const ItemDetails = () => {
                     <section>:כמות במ"ר</section>
                     <section>:מספר חבילות</section>
                     <button className=''>
-                        <span> הוסף לסל
+                        <span> לפרטים והצעת מחיר
                             </span></button>
                     <section className='delivery-options'>אפשרויות משלוחים-</section>
                 </div>

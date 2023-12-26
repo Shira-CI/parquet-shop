@@ -44,8 +44,8 @@ function App() {
               <Route element={<MainCatalog />} path='/catalog' />
               <Route element={<ParquetSpc />} path='/catalog/spc' />
               <Route element={<ParquetLamination />} path='/catalog/lamination' />
-              {/* <Route element={<ItemIndex />} path='/item' /> */}
-              {/* <Route element={<ItemDetails />} path='/item/:itemId' /> */}
+              <Route element={<ItemIndex />} path='/item' />
+              <Route element={<ItemDetails />} path='/item/:itemId' />
               <Route element={<Projects />} path='/project' />
               <Route element={<Contact />} path='/contact' />
             </Routes>

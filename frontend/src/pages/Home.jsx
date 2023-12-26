@@ -1,15 +1,18 @@
 import Hero from '../cmps/Hero'
 import HomeParquets from '../cmps/HomeParquets'
 import { useState, useEffect, useRef } from 'react'
-import HomeProjects from '../cmps/HomeProjects';
+import HomeProjects from '../cmps/HomeProjects'
 
 const HomePage = () => {
+  const [isMobile, setIsMobile] = useState(false)
 
   const [componentVisibility, setComponentVisibility] = useState({
     hero: true,
     parquets: false,
     projects: false,
-  });
+  })
+
+
 
   // console.log(componentVisibility)
 
@@ -25,6 +28,23 @@ const HomePage = () => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 500px)')
+    setIsMobile(mediaQuery.matches)
+
+    const handleMediaQueryChange = (event) => {
+        setIsMobile(event.matches)
+    }
+
+    mediaQuery.addEventListener('change', handleMediaQueryChange)
+
+    return () => {
+        mediaQuery.removeEventListener('change', handleMediaQueryChange)
+
+    }
+}, [])
+
 
 
   // const handleScroll = () => {
@@ -59,7 +79,7 @@ const HomePage = () => {
     <>
       <Hero ref={heroRef} isVisible={componentVisibility.hero} />
       <HomeParquets ref={parquetsRef} isVisible={componentVisibility.parquets} />
-      <HomeProjects ref={projectsRef} isVisible={componentVisibility.projects} />
+      <HomeProjects ref={projectsRef} isVisible={componentVisibility.projects} isMobile={isMobile} />
    <div>dwdasasa</div>
    <div>dwdasasa</div>
    <div>dwdasasa</div>

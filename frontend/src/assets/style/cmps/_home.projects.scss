@@ -89,12 +89,8 @@
 
 
     @include for-narrow-layout {
-
         min-height: calc(100vh - 150px);
-
         .home-projects{
-
-            
             .home-projects-header {
                 margin-block-end: 50px;
             }

@@ -24,8 +24,8 @@ const HomeProjects = forwardRef(({ isVisible, isMobile }, ref) => {
                         {isMobile ? (
                             <>
                                 <Carousel projects={projects} />
-                                <button className='mobile-projects-btn' > 
-                                לכל הפרויקטים 
+                                <button className='mobile-projects-btn' >
+                                    לכל הפרויקטים
                                 </button>
                             </>
                         ) : (
@@ -48,12 +48,10 @@ const HomeProjects = forwardRef(({ isVisible, isMobile }, ref) => {
                                             </section>
                                         </span>
                                         <img src={project.img} alt="" />
-
                                     </li>
-
                                 )}
                             </ul>
-                            )
+                        )
                         }
                     </section>
 

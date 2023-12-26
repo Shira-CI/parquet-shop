@@ -30,43 +30,38 @@ export function Carousel({ projects }) {
       </div>
 
       <div className="carousel-arrows">
-        <section>
-          <button
-            className="button-arrow-forward"
-            onClick={(ev) => {
-              updateIndex(activeIndex + 1, ev)
-            }}
-          >
-            <span className="material-symbols-outlined">arrow_forward_ios</span>
-          </button>
-        </section>
-        <section>
-          <button
-            className="button-arrow-back"
-            onClick={(ev) => {
-              updateIndex(activeIndex - 1, ev)
-            }}
-          >
-            <span className="material-symbols-outlined arrow-back">arrow_back_ios</span>
-          </button>
-        </section>
+        <button
+          className="button-arrow-back"
+          onClick={(ev) => {
+            updateIndex(activeIndex - 1, ev)
+          }}
+        >
+          <span className="material-symbols-outlined arrow-back">arrow_back_ios</span>
+        </button>
+        <button
+          className="button-arrow-forward"
+          onClick={(ev) => {
+            updateIndex(activeIndex + 1, ev)
+          }}
+        >
+          <span className="material-symbols-outlined">arrow_forward_ios</span>
+        </button>
       </div>
 
       <div className="indicators">
         {projects.map((project, index) => {
+
           return (
-            <button
+            <span
               key={index}
-              className="indicator-button"
-            >
-              <span
-                className={`fa-solid fa-circle ${index === activeIndex
-                  ? "indicator-symbol-active"
+              className={`
+               ${index === activeIndex
+                  ? "indicator-symbol active"
                   : "indicator-symbol"
-                  }`}
-              >
-              </span>
-            </button>
+                }`}
+            >
+
+            </span>
           )
         })}
       </div>

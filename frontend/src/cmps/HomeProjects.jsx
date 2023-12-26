@@ -25,6 +25,10 @@ const HomeProjects = forwardRef(({ isVisible, isMobile }, ref) => {
                             <>
                                 <Carousel projects={projects} />
                                 <button className='mobile-projects-btn' >
+                                
+                                    <span class="material-symbols-outlined">
+                                        arrow_forward
+                                    </span>
                                     לכל הפרויקטים
                                 </button>
                             </>

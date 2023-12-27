@@ -5,7 +5,6 @@
     position: fixed;
     top: 0;
     width: 100%;
-    // background-color: rgb(255, 255, 255);
     z-index: 3;
 
     >* {
@@ -14,15 +13,16 @@
 
     .hide-bcg {
         position: absolute;
-        left: -20px;
-        width: 100%;
+        right: -20px;
+        width: 100vw;
         height: 100vh;
         background-color: rgba(19, 30, 30, 0.615);
-        z-index: 3;
+        z-index: 2;
     }
 
     .menu-icon {
         position: relative;
+        z-index: 3;
     }
 
     .header-content {
@@ -52,23 +52,27 @@
             }
 
             .mobile-nav-links-container {
+                // color: $clr-1;
+                background-color: rgba(255, 255, 255, 0.683);
+                background-color: $clr2;
+                opacity: 0.9;
+                color: black;
+                height: 100vh;
+                width: 50%;
                 display: flex;
                 flex-direction: column;
                 align-items: end;
-                width: 70%;
-                gap: 10px;
+                gap: 15px;
+                font-family: Assistant-SemiBold, Arial, Helvetica, sans-serif;
+                font-size: 1em;
                 list-style: none;
                 border-radius: 5px;
-                background-color: rgba(245, 245, 220, 0.942);
-                padding: 15px 20px;
+                padding: 30px 20px;
                 position: absolute;
                 top: 0;
                 z-index: 3;
-                right: 2px;
-                font-family: Assistant-SemiBold, Arial, Helvetica, sans-serif;
-                font-size: 1.25em;
-                height: 100vh;
-
+                right: -2px;
+                direction: ltr
             }
         }
     }

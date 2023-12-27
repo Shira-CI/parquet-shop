@@ -1,4 +1,5 @@
 import { forwardRef } from 'react'
+import { Link } from 'react-router-dom'
 import { projects } from '../constants'
 import { motion } from 'framer-motion'
 import { fadeIn, slideIn } from '../utils/motion'
@@ -24,13 +25,16 @@ const HomeProjects = forwardRef(({ isVisible, isMobile }, ref) => {
                         {isMobile ? (
                             <>
                                 <Carousel projects={projects} />
-                                <button className='mobile-projects-btn' >
-                                
-                                    <span class="material-symbols-outlined">
+                                <Link to={`/project`}
+                                className='mobile-projects-btn'
+                          
+                                >
+                                    <span className="material-symbols-outlined">
                                         arrow_forward
                                     </span>
                                     לכל הפרויקטים
-                                </button>
+                                </Link>
+
                             </>
                         ) : (
                             <ul >

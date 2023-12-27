@@ -1,87 +1,35 @@
 .home-projects-container {
     margin-block-start: 70px;
     color: $clr-1;
-    min-height: calc(100vh - 150px);
-
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    
     .home-projects {
+        flex-grow: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        height: 100%;
 
         .home-projects-header {
             margin-block-end: 25px;
         }
-
+        
         .projects {
-            height: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
 
-            ul {
-                height: 100%;
-                display: flex;
-                list-style: none;
-                gap: 3px;
 
-                li {
-                    flex: 1;
-                    position: relative;
-                    transition: 0.6s;
-                    cursor: pointer;
-
-                    span {
-                        position: absolute;
-                        display: none;
-                    }
-
-                    img {
-                        height: 100%;
-                        object-fit: cover;
-                        border-radius: 5px;
-
-                    }
-
-                    &:hover {
-                        flex: 5;
-                        transition: 0.6s;
-
-                        span {
-                            display: flex;
-                            flex-direction: column;
-                            gap: 5px;
-                            justify-content: center;
-                            align-items: center;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-
-                            :nth-child(1) {
-                                font-size: 3em;
-                            }
-
-                            :nth-child(2) {
-                                font-family: Assistant-SemiBold;
-                                font-size: 1em;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                gap: 3px;
-
-                                img {
-                                    width: 20px;
-                                    height: 20px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            .mobile-projects-btn{
+            .mobile-projects-btn {
                 display: flex;
                 margin: 20px auto;
-                padding: 5px;
+                padding: 5px 10px;
                 border-radius: 5px;
+                width: fit-content;
+                border: 1px solid $clr-1;
+                text-decoration: none;
+                color: $clr-1;
             }
         }
     }
@@ -89,10 +37,79 @@
 
 
     @include for-narrow-layout {
-        min-height: calc(100vh - 150px);
-        .home-projects{
+
+        height: calc(100vh - 150px);
+
+        .home-projects {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
             .home-projects-header {
                 margin-block-end: 50px;
+            }
+
+            .projects {
+                height: 100%;
+                ul {
+                    height: 100%;
+                    display: flex;
+                    list-style: none;
+                    gap: 3px;
+    
+                    li {
+                        flex: 1;
+                        position: relative;
+                        transition: 0.6s;
+                        cursor: pointer;
+    
+                        span {
+                            position: absolute;
+                            display: none;
+                        }
+    
+                        img {
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 5px;
+                        }
+    
+                        &:hover {
+                            flex: 5;
+                            transition: 0.6s;
+    
+                            span {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 5px;
+                                justify-content: center;
+                                align-items: center;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+    
+                                :nth-child(1) {
+                                    font-size: 3em;
+                                }
+    
+                                :nth-child(2) {
+                                    font-family: Assistant-SemiBold;
+                                    font-size: 1em;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: 3px;
+    
+                                    img {
+                                        width: 20px;
+                                        height: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

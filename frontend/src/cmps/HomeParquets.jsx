@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { parquetTypes } from '../constants'
 import { motion } from 'framer-motion'
 import { fadeIn, slideIn } from '../utils/motion'
+import { InView } from 'react-intersection-observer';
+
 
 const HomeParquets = forwardRef(({ isVisible }, ref) => {
     return (
@@ -43,7 +45,7 @@ const HomeParquets = forwardRef(({ isVisible }, ref) => {
 
                                         </span>
                                         <div>
-                                             <img className='img2' src={type.img} alt="" />
+                                            <img className='img2' src={type.img} alt="" />
                                         </div>
                                     </li>
                                 </Link>

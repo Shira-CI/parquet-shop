@@ -5,7 +5,7 @@ export function Carousel({ projects }) {
   const [activeIndex, setActiveIndex] = useState(0)
 
   const updateIndex = (newIndex, ev) => {
-    console.log(newIndex)
+    // console.log(newIndex)
     ev.preventDefault()
     if (newIndex < 0) {
       newIndex = 0

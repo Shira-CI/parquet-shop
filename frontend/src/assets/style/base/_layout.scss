@@ -2,31 +2,27 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: $layoutPadding 1fr $layoutPadding;
-    grid-template-rows: min-content 1fr;
-    height: 100%;
+    // grid-template-rows: min-content 1fr;
+    // height: 100%;
 
     > * {
         grid-column: 2;
     }
 
 
-
     .main-app{
-        display: flex;
         width: 100%;
-        flex-direction: column;
     }
-
+    
     @include for-narrow-layout {
         @include layoutGTC($break-narrow);
         > *.full {
             grid-column: 1 / -1;
         }
         .main-app{
-            // display: inline-block;
-    
+            display: flex;
+            flex-direction: column;
         }
-        // height: auto;
     }
     
     @include for-normal-layout {

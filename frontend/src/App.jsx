@@ -10,7 +10,7 @@ import Footer from './cmps/Footer.jsx'
 import About from './pages/About.jsx'
 import ItemIndex from './pages/ItemIndex.jsx'
 import ItemDetails from './pages/ItemDetails.jsx'
-import HomePage from './pages/Home.jsx'
+import HomePage from './pages/HomePage.jsx'
 import ParquetSpc from './pages/ParquetSpc.jsx'
 
 import Projects from './pages/Projects.jsx'

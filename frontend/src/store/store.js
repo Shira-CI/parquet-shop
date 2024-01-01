@@ -2,11 +2,12 @@ import { combineReducers, legacy_createStore as createStore } from 'redux'
 
 import { itemReducer } from './item.reducer'
 import { userReducer } from './user.reducer'
-import { cartReducer } from './cart.reducer'
+import { visibilityReducer } from './visibility.reducer'
 
 
 const rootReducer = combineReducers({
     itemModule: itemReducer,
+    visibilityModule : visibilityReducer,
     // userModule: userReducer,
     // cartModule: cartReducer
 })

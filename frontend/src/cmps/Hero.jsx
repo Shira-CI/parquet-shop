@@ -1,24 +1,34 @@
-import { hero } from "../assets"
-import { hero2 } from "../assets"
-import { hero3 } from "../assets"
-import { motion, AnimatePresence } from 'framer-motion'
-import { textVariant, fadeIn } from '../utils/motion'
-import { SectionWrapper } from '../hoc'
+import { useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
 import { forwardRef } from 'react'
+import { hero3 } from "../assets"
+import { fadeIn } from '../utils/motion'
+import { useDispatch, useSelector } from 'react-redux'
+import { store } from '../store/store'
+import { SET_HERO_HEIGHT } from '../store/visibility.reducer'
 
 const Hero = forwardRef(({ isVisible }, ref) => {
-    // console.log(isVisible)
+    const heroRef = useRef('')
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        if (!heroRef.current.offsetHeight) return
+        const height = heroRef.current.offsetHeight
+        // console.log(height)
+        store.dispatch({ type: SET_HERO_HEIGHT, height: height })
+    }, [heroRef.current.offsetHeight])
+
 
     return (
-        // <AnimatePresence>
+
         <div ref={ref} className="hero-container">
-            <div className="hero-bcg">
+            <div ref={heroRef} className="hero-bcg">
                 <div></div>
                 <img src={hero3} alt="hero" />
             </div>
+
             {isVisible &&
                 <motion.div
-                    // key="hero-text"
                     variants={fadeIn('up', '', 0.1, 1.2, 'hero')}
                     initial='hidden'
                     animate="show"
@@ -37,10 +47,9 @@ const Hero = forwardRef(({ isVisible }, ref) => {
                 </motion.div>
             }
         </div>
-        // </AnimatePresence>
+
 
     )
 })
 
 export default Hero
-// export default SectionWrapper(Hero, "hero")

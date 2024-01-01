@@ -17,20 +17,20 @@ import Projects from './pages/Projects.jsx'
 import Contact from './pages/Contact.jsx'
 import MainCatalog from './pages/MainCatalog.jsx'
 import ParquetLamination from './pages/ParquetLamination.jsx'
-function App() {
 
+
+
+function App() {
   useEffect(() => {
     const handleLoad = () => {
       // console.log('App is fully loaded!')
     }
-
     window.addEventListener('load', handleLoad);
 
     return () => {
       window.removeEventListener('load', handleLoad);
     }
   }, [])
-
 
   return (
     <Provider store={store}>

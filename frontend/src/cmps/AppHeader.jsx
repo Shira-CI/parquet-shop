@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useSelector } from 'react-redux'
 import { Link, useNavigate, useParams, useLocation } from 'react-router-dom'
 import { navLinks } from '../constants/index.js'
 import { logo, menu, close } from '../assets'
@@ -10,24 +11,45 @@ const AppHeader = () => {
     const navigate = useNavigate()
     const location = useLocation()
     const currentPath = location.pathname
+    const [dynHeaderBcg, setDynHeaderBcg] = useState('')
+    const heroHeight = useSelector(storeState => storeState.visibilityModule.hero)
 
-    let dynBorderClass = (currentPath === '/') ? '' : 'header-bcg'
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollY = window.scrollY
+            const newHeaderBcg = (scrollY >= (heroHeight - 100)) ? 'header-bcg' : ''
+            setDynHeaderBcg(newHeaderBcg)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [heroHeight])
+
+    useEffect(() => {
+        const newHeaderBcg = (currentPath === '/') ? '' : 'header-bcg'
+        setDynHeaderBcg(newHeaderBcg)
+    }, [currentPath])
 
     function onNavLink(linkId) {
         setActive(linkId)
         navigate(`/${linkId}`)
     }
 
-
     return (
         <>
-            <div className={`header-container full ${dynBorderClass}`}>
+            <div className={`header-container full ${dynHeaderBcg}`}>
                 {toggleMobileMenu &&
                     <div className='hide-bcg' onClick={() => setToggleMobileMenu(false)}></div>
                 }
 
                 <div className="header-content">
-                    <section className="logo" onClick={() => { navigate('/') }}>
+                    <section className="logo" onClick={() => {
+                        navigate('/')
+                        setActive('')
+                    }}>
                         <img className='logo-img' src={logo} alt="logo" />
 
                     </section>

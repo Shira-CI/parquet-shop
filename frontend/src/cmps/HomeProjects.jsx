@@ -1,12 +1,20 @@
 import { forwardRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link , useNavigate } from 'react-router-dom'
 import { projects } from '../constants'
 import { motion } from 'framer-motion'
 import { fadeIn, slideIn } from '../utils/motion'
 import { arrowRight } from '../assets'
 import { Carousel } from './Carousel'
+import { useState, useEffect } from 'react'
 
 const HomeProjects = forwardRef(({ isVisible, isMobile }, ref) => {
+
+    const navigate = useNavigate()
+
+    function onNavLink(linkId) {
+     
+        navigate(`/${linkId}`)
+    }
     return (
         <div ref={ref} className="home-projects-container">
             {isVisible &&
@@ -25,16 +33,19 @@ const HomeProjects = forwardRef(({ isVisible, isMobile }, ref) => {
                         {isMobile ? (
                             <>
                                 <Carousel projects={projects} />
-                                <Link to={`/project`}
-                                className='mobile-projects-btn'
-                          
+                                {/* <Link to={`/project`} */}
+                                <div  className='mobile-projects-btn'
+                                 onClick={() => onNavLink('project')}
                                 >
+                               
+                          
+                                
                                     <span className="material-symbols-outlined">
                                         arrow_forward
                                     </span>
                                     לכל הפרויקטים
-                                </Link>
-
+                                {/* </Link> */}
+                                </div>
                             </>
                         ) : (
                             <ul >

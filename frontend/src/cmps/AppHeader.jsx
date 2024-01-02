@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import { Link, useNavigate, useParams, useLocation } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { navLinks } from '../constants/index.js'
 import { logo, menu, close } from '../assets'
 
 const AppHeader = () => {
     const [active, setActive] = useState('')
+    const [dynHeaderBcg, setDynHeaderBcg] = useState('')
     const [toggleMobileMenu, setToggleMobileMenu] = useState(false)
 
     const navigate = useNavigate()
     const location = useLocation()
     const currentPath = location.pathname
-    const [dynHeaderBcg, setDynHeaderBcg] = useState('')
     const heroHeight = useSelector(storeState => storeState.visibilityModule.hero)
 
     useEffect(() => {
@@ -29,8 +29,10 @@ const AppHeader = () => {
     }, [heroHeight])
 
     useEffect(() => {
+        // console.log(currentPath)
         const newHeaderBcg = (currentPath === '/') ? '' : 'header-bcg'
         setDynHeaderBcg(newHeaderBcg)
+        // console.log(newHeaderBcg)
     }, [currentPath])
 
     function onNavLink(linkId) {

@@ -34,7 +34,7 @@ const HomeProjects = forwardRef(({ isVisible, isMobile }, ref) => {
                                 <Carousel projects={projects} />
 
                                 <div className='mobile-projects-btn'
-                                    onClick={() => onNavLink('project')}
+                                    onClick={() => onProject('project')}
 
                                 >
                                     <span className="material-symbols-outlined">

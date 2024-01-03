@@ -2,14 +2,16 @@
 
 const Footer = () => {
     return (
-        <div className='footer full'>
+        <footer className="full">
             footer
             footer
             footer
             footer
             footer
             footer
-        </div>
+            footer
+            footer
+        </footer>
     )
 }
 

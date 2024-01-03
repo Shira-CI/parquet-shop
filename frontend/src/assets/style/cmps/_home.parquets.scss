@@ -34,14 +34,11 @@
         gap: 30px;
 
 
-        a {
+        li {
             width: 100%;
             font-family: Assistant-SemiBold, Arial, Helvetica, sans-serif;
             color: $clr1;
             text-decoration: none;
-        }
-
-        li {
             cursor: pointer;
             height: 100%;
             display: flex;

@@ -1,12 +1,17 @@
 import { forwardRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link , useNavigate} from 'react-router-dom'
 import { parquetTypes } from '../constants'
 import { motion } from 'framer-motion'
 import { fadeIn, slideIn } from '../utils/motion'
-import { InView } from 'react-intersection-observer';
-
 
 const HomeParquets = forwardRef(({ isVisible }, ref) => {
+
+    const navigate = useNavigate()
+
+    function onParquetType(type) {
+        navigate(`/catalog/${type}`)
+    }
+
     return (
         <div ref={ref} className="home-parquets-container">
             {isVisible &&
@@ -34,11 +39,13 @@ const HomeParquets = forwardRef(({ isVisible }, ref) => {
                     <section className="home-parquets">
                         <ul className="parquet-types">
                             {parquetTypes.map((type, idx) =>
-                                <Link to={`/catalog/${type.id}`} key={type.id}>
+                                // <Link to={`/catalog/${type.id}`} key={type.id}>
                                     <li
                                         variants={slideIn('up', '', idx + 0.1, 0.2)}
                                         initial='hidden'
                                         animate="show"
+                                        key={type.id}
+                                        onClick={()=>{onParquetType(type.id)}}
                                     >
                                         <span>
                                             {type.title}
@@ -48,7 +55,7 @@ const HomeParquets = forwardRef(({ isVisible }, ref) => {
                                             <img className='img2' src={type.img} alt="" />
                                         </div>
                                     </li>
-                                </Link>
+                                //  </Link>
                             )}
 
                         </ul>

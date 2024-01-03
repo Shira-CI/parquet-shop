@@ -54,7 +54,6 @@ const HomeProjects = forwardRef(({ isVisible, isMobile }, ref) => {
                                         initial='hidden'
                                         animate="show"
                                     >
-
                                         <span>
                                             <section>
                                                 {project.title}

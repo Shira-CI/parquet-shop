@@ -6,24 +6,28 @@ export const projects = [
     {
         id:'project1',
         title:' 1',
+        page: 'project',
         img:hero,
         products:[]
     },
     {
         id:'project2',
         title:'2 ',
+        page: 'project',
         img:hero2,
         products:[]
     },
     {
         id:'project3',
         title:' 3',
+        page: 'project',
         img:hero3,
         products:[]
     },
     {
         id:'project4',
         title:' 4',
+        page: 'project',
         img:hero3,
         products:[]
     }

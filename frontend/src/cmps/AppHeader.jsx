@@ -29,11 +29,15 @@ const AppHeader = () => {
     }, [heroHeight])
 
     useEffect(() => {
-        // console.log(currentPath)
         const newHeaderBcg = (currentPath === '/') ? '' : 'header-bcg'
         setDynHeaderBcg(newHeaderBcg)
+        setActive(currentPath)
+        // console.log(currentPath)
         // console.log(newHeaderBcg)
-    }, [currentPath])
+        // console.log(dynHeaderBcg) 
+        // console.log(active) 
+    }, [currentPath, active])
+
 
     function onNavLink(linkId) {
         setActive(linkId)
@@ -60,7 +64,7 @@ const AppHeader = () => {
                             {navLinks.map((link) => (
                                 <li key={link.id}
                                     onClick={() => onNavLink(link.id)}
-                                    className={`${active === link.id ? 'nav-link active' : 'nav-link'}`}>
+                                    className={`${active === ('/' + link.id) ? 'nav-link active' : 'nav-link'}`}>
                                     {link.title}
                                 </li>
                             ))}

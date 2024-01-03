@@ -1,20 +1,19 @@
 import { forwardRef } from 'react'
-import { Link , useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { projects } from '../constants'
 import { motion } from 'framer-motion'
 import { fadeIn, slideIn } from '../utils/motion'
 import { arrowRight } from '../assets'
 import { Carousel } from './Carousel'
-import { useState, useEffect } from 'react'
 
 const HomeProjects = forwardRef(({ isVisible, isMobile }, ref) => {
 
     const navigate = useNavigate()
 
-    function onNavLink(linkId) {
-     
-        navigate(`/${linkId}`)
+    function onProject(page) {
+        navigate(`/${page}`)
     }
+
     return (
         <div ref={ref} className="home-projects-container">
             {isVisible &&
@@ -33,29 +32,29 @@ const HomeProjects = forwardRef(({ isVisible, isMobile }, ref) => {
                         {isMobile ? (
                             <>
                                 <Carousel projects={projects} />
-                                {/* <Link to={`/project`} */}
-                                <div  className='mobile-projects-btn'
-                                 onClick={() => onNavLink('project')}
+
+                                <div className='mobile-projects-btn'
+                                    onClick={() => onNavLink('project')}
+
                                 >
-                               
-                          
-                                
                                     <span className="material-symbols-outlined">
                                         arrow_forward
                                     </span>
                                     לכל הפרויקטים
-                                {/* </Link> */}
+
                                 </div>
                             </>
                         ) : (
                             <ul >
                                 {projects.map((project, idx) =>
                                     <li
+                                        onClick={() => onProject(project.page)}
                                         variants={slideIn('up', '', idx + 0.1, 0.2)}
                                         key={project.id}
                                         initial='hidden'
                                         animate="show"
                                     >
+
                                         <span>
                                             <section>
                                                 {project.title}
@@ -67,6 +66,7 @@ const HomeProjects = forwardRef(({ isVisible, isMobile }, ref) => {
                                             </section>
                                         </span>
                                         <img src={project.img} alt="" />
+
                                     </li>
                                 )}
                             </ul>

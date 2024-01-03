@@ -16,8 +16,6 @@ const HomePage = () => {
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches)
     }
-
-    
     mediaQuery.addEventListener('change', handleMediaQueryChange)
     
     return () => {
@@ -26,14 +24,6 @@ const HomePage = () => {
     }
   }, [])
   
-  useEffect(()=>{
-    
-
-    // console.log(isHeroVisible)
-
-  } , [isHeroVisible])
-
-
   return (
     <>
       <InView triggerOnce>

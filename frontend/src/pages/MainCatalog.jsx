@@ -5,7 +5,6 @@ const MainCatalog = () => {
     return (
         <div className="main-catalog">
             <div className="main-catalog-header">
-
                 סוגי פרקטים
             </div>
 

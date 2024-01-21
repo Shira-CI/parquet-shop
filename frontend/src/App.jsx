@@ -17,6 +17,7 @@ import Projects from './pages/Projects.jsx'
 import Contact from './pages/Contact.jsx'
 import MainCatalog from './pages/MainCatalog.jsx'
 import ParquetLamination from './pages/ParquetLamination.jsx'
+import ParquetWood from './pages/ParquetWood.jsx'
 
 
 
@@ -43,6 +44,7 @@ function App() {
               <Route element={<About />} path='/about' />
               <Route element={<MainCatalog />} path='/catalog' />
               <Route element={<ParquetSpc />} path='/catalog/spc' />
+              <Route element={<ParquetWood />} path='/catalog/wood' />
               <Route element={<ParquetLamination />} path='/catalog/lamination' />
               <Route element={<ItemIndex />} path='/item' />
               <Route element={<ItemDetails />} path='/item/:itemId' />

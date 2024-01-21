@@ -13,8 +13,8 @@ const ParquetSpc = () => {
                 <section className="type-gallery">
                     <h3>סוגי פרקט SPC</h3>
                     <div>
-                    <section> פרקט SPC סוג 1</section>
-                    <section> פרקט SPC סוג 2</section>
+                    <section>פלנקים</section>
+                    <section>פישבון</section>
 
                     </div>
 

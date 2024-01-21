@@ -1,30 +1,28 @@
 
-const ParquetLamination = () => {
+const ParquetWood = () => {
     return (
         <>
             <div className="type-container">
                 <h2>
-                    פרקט למינציה 
+                    פרקט עץ מלא 
                 </h2>
                 <section>
                     למינציה בפרקט היא תהליך הכנסת שכבה אומגנטית עמידה וקשה לחומר העץ, וזאת בכדי להגן על הפרקט מפני שחיקה, לחות ושפשוף. במהלך התהליך, יוצרים שכבה אחידה ומחוזקת המגבירה את עמידותו של הפרקט ומשפרת את מראהו. למינציה כזו נהנים לקוחות מחיבור של טבעיות העץ עם היציבות והעמידות שמצוינות בפרקט מלומן. התוצאה היא רצוייה ומושכת, יוצרת אסתטיקה יוקרתית ושומרת על מראה מסודר וחם לאורך זמן.
                 </section>
 
                 <section className="type-gallery">
-                    <h3>סוגי פרקט למינציה</h3>
+                    <h3>סוגי פרקט עץ מלא</h3>
                     <div>
-                    <section>פרקט למינציה</section>
-                    <section> פרקט למינציה עמיד למים</section>
+                    <section>פלנקים</section>
+                    <section>פישבון</section>
+                    <section>שברון</section>
 
                     </div>
 
                 </section>
             </div>
-
-
-
         </>
     )
 }
 
-export default ParquetLamination
+export default ParquetWood

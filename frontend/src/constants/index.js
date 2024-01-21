@@ -47,7 +47,7 @@ export const parquetTypes = [
     },
     {
         id:'wood',
-        title:'פרקט עץ',
+        title:'פרקט עץ מלא',
         img:hero3,
         products:[]
     }
